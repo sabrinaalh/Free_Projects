@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <script src="https://kit.fontawesome.com/73405d9a1e.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        :root{          
+            --gray:rgb(37, 34, 34);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            font-family: "Montserrat", serif;
+            margin: 40px;
+            line-height: 1.5;
+            gap: 50px;
+        }
+        section{
+            max-height: min-content;            
+            position: relative;
+        }
+        .flex-container{
+            border:1px solid black;
+            max-width: 42vw;
+            border-radius: 25px;
+            padding: 30px;
+
+        }
+        #flex-container2{
+            max-width: 490px;
+            border-radius: 5%;
+
+        }
+        #flex-container3{
+            display: flex;
+            flex-direction: row;
+            gap:10px;
+            flex-wrap:wrap;
+            width: 100vw;
+            justify-content: space-evenly;
+            margin: 20px 0 20px 0;
+        }
+        .user-info{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            position: relative;
+            padding-top: 30px;
+            padding-left:5% ;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .user-name{
+            margin: 20px;
+        }
+
+        .circle_photo{
+            width: 70px;
+            height: 70px;
+            background-size: cover;
+            border-radius: 50%;
+        }
+        .square-photo{
+            max-width: 318px;
+            max-height:360px;
+            background-color: rgb(233, 233, 233);
+            border-radius: 15px;
+            background-size: cover;
+            position: relative;
+
+        }
+        #basic-quote{
+            padding: 5% 5% 10% 5%px;
+        }
+        #basic-quote::before{
+            content:""
+
+        }
+        #quote-ballon{
+            background-color:var(--gray);
+            color: aliceblue;
+            padding: 20px;
+            border-radius: 25px;
+            position: relative;
+        }
+        #quote-ballon::after{
+            content: " ";
+            width: 25px;
+            height: 25px;
+            position: relative;
+            background-color: var(--gray);
+            top: 33px;
+            left: 30px;
+            display: flex;
+            transform: rotate(45deg);
+        }
+
+        #almost-quote-ballon{
+            background-color: var(--gray);
+            color: aliceblue;
+            padding: 50px;
+            border-radius: 25px;
+            position: relative;
+            max-width: 600px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .slider{
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        blockquote p{
+            margin-top: 10px;
+        }
+
+        i{
+            color: rgb(255, 230, 0);
+            font-size: 1.5rem;
+        }
+
+        .button{
+            border: 2px solid rgb(189, 187, 187);
+            border-radius: 50%;
+            color: aliceblue;
+            padding: 10px 20px ;
+            position: relative;
+        }
+        .button::after{
+            content: " ";
+            border-top: 3px  solid var(--gray);
+            border-right:  3px  solid var(--gray);
+            position: absolute;
+            top: 10px;
+            padding: 7px;
+            left: 9px;
+            transform: rotate(45deg);
+            
+        }
+     
+
+    </style>
+</head>
+<body>
+    <section class="flex-container">
+        <div>
+            <blockquote id="basic-quote">
+                <p>
+                    "Poyo! Kirby aqui, e essa chapinha é incrível, poyo! Ela aquece super rápido e deixa meu cabelo super lisinho, parecendo um marshmallow fofinho, poyo! Além disso, é leve e fácil de segurar, perfeita para mim, que sou pequenino, poyo! Só toma cuidado para não queimar os dedinhos, poyo-po!"
+                </p>
+            </blockquote>
+        </div>
+        <div class="user-info">
+            <img class="circle_photo" src="./kirby.jpeg" alt="foto do kirby">
+            <div class="user-name">
+                <h2>Kirby</h2>
+                <p> Herói Planetário Profissional!</p>
+            </div>
+        </div>
+    </section> 
+    <section id="flex-container2">
+        <blockquote id="quote-ballon">
+            <p>
+                "Noot noot! Pingu aqui, e essa geladeira é incrível, noot! Ela mantém todos os meus peixinhos fresquinhos e o gelo sempre perfeito para escorregar, noot noot! O espaço interno é enorme, cabem até meus amigos para uma festa do pólo, noot! E o melhor: ela é super silenciosa, perfeita para tirar um cochilo ao lado, noot noot!"
+            </p>
+        </blockquote>
+        <div class="user-info">
+            <img class="circle_photo" src="./pingu.jpg" alt="foto do kirby">
+            <div class="user-name">
+                <h2>Kirby</h2>
+                <p> Aventureiro Curioso Junior!</p>
+            </div>
+        </div>
+    </section>
+    <section id="flex-container3">       
+        <img class="square-photo" src="gumball_darwin.png" alt="Gumball e Darwin de 'O incrivel mundo de gumball'"/>
+        <div id="almost-quote-ballon">
+            <div id="title">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <h2>Gumball e Darwin Watterson</h2>
+                <p> Aventureiros E Irmãos Inseparáveis</p>
+            </div>
+        
+                <blockquote >
+                    <p>"Gumball: Cara, esse fone é tipo a oitava maravilha do mundo, sério! O som é tão bom que até o barulho da mamãe reclamando vira música, haha! Darwin: E ele é super confortável, parece que está abraçando minhas orelhas com amor e batidas de baixo!  Gumball: Compraria de novo? Duh, óbvio!"</p>
+                </blockquote>
+
+        </div>
+    </section> 
+    <section  class="flex-container">
+        <blockquote>
+            <p>
+                "Adorei a pipoca dessa pipoqueira! Era doce, crocante e tinha um toque mágico que me lembrou o Reino do Doce. Definitivamente, a melhor pipoca do Ooo!" 🍿✨
+            </p>
+        </blockquote>
+
+        <div class="slider">
+            <a href="" class="button"> </a>
+            <img class="circle_photo" src="./zelda.jpeg" alt="Princessa Zelda">
+            <img class="circle_photo" src="jujuba.jpg" alt="Princessa jujuba">
+            <img class="circle_photo" src="./zelda.jpeg" alt="Princessa Zelda">
+            <a href="" class="button"> </a>
+        </div>
+
+    </section>
+</body>
+</html>

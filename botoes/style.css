@@ -1,0 +1,106 @@
+:root{
+    --background: rgb(16,16,16);
+    --btn1:rgb(0,191,255) ;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--background);
+    
+}
+/*Exclusive section for first button*/
+.btn-container1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top:10vh ;
+
+}
+#btn1{
+    text-decoration: none;
+    color: var(--btn1);
+    border: 2px solid var(--btn1);
+    padding: 2rem 5rem;
+    position: relative;
+    overflow: hidden;
+    transition:all 1s ;
+
+}
+
+#btn1:before{
+    content: "Abusadinho";
+    font-weight: bold;
+    color: var(--background);
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--btn1);
+    transform: translateY(-100%);
+    transition: all 1s;
+    /*center*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn1:hover:before{
+    transform: translateY(0);
+}
+
+/*Exclusive section for second button*/
+
+#btn2{
+    color: var(--btn1);
+    text-decoration: none;
+    font-size: 2rem;
+    position: relative;
+}
+
+#btn2::after{
+    content: "";
+    width: 0%;
+    height: 4px;
+    background-color: var(--btn1);
+    position: absolute;
+    bottom:0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+#btn2:hover::after{
+    width: 100%;
+}
+
+/*Exclusive section for thirth button*/
+
+#btn3{
+    background-image: linear-gradient(45deg, #0000ff,#00c4f5);
+    padding: 20px 40px;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+@keyframes pulsar {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+
+#btn3:hover{
+    animation-name: pulsar;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
